@@ -27,7 +27,7 @@ container.append(card);
 
 // Aggiungo dello stile alla mia Card
 
-card.classList.add('card', 'rounded', 'bg-dark', 'text-center', 'text-danger');
+card.classList.add('card', 'rounded', 'bg-dark', 'text-center', 'text-light');
 
 // Prendo il Form dall'HTML e lo metto dentro la mia Card
 
@@ -65,16 +65,46 @@ console.log('diceComputer', diceComputer, typeof diceComputer);
 if (dicePlayer > diceComputer) {
 
 
-    // Creo un elemento in HTML
+    // Creo un elemento in HTML e faccio apparire un messaggio per l'Utente
     const victory = document.createElement('div');
     console.log('victory', victory, typeof victory);
+
+    const victoryText = 'Complimenti, Hai vinto!';
+    console.log('victoryText', victoryText, typeof victoryText);
+
+    victory.classList.add('text-success');
+
+    myForm.append(victory, victoryText);
+
+    victory.innerHTML =`You : ${dicePlayer},
+
+    Me: ${diceComputer}.`;
 
     console.log('Complimenti giocatore! Hai vinto');
 
 } else {
 
+    // Creo un elemento in HTML e faccio apparire un messaggio per l'Utente
+    const defeat = document.createElement('div');
+    console.log('defeat', defeat, typeof defeat);
+
+    const defeatText = 'Fai schifo!';
+    console.log('defeatText', defeatText, typeof defeatText);
+
+    defeat.classList.add('text-danger');
+
+
+    myForm.append(defeat, defeatText);
+
+    defeat.innerHTML =`You: ${dicePlayer},
+
+    Me : ${diceComputer}.`;
+
+    console.log('Complimenti giocatore! Hai vinto');
+
+
     console.log('Fai schifo! Hai perso');
-}
+} 
 
 })
 
