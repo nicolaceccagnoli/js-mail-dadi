@@ -9,6 +9,14 @@
 
 */
 
+//  Prendo un elemento dall'HTML per stilizzarlo
+
+const container = document.querySelector('.container-fluid');
+console.log('container', container, typeof container);
+
+container.classList.add('bg-primary', 'vh-100', 'text-center');
+
+
 // 1) - a) Scrivo un programma che generi un numero da 1 a 6 per il giocatore;
 
 let dicePlayer = Math.floor(Math.random() * (6 - 1 + 1) ) + 1;
@@ -27,3 +35,4 @@ if (dicePlayer > diceComputer) {
 } else {
     console.log('Fai schifo! Hai perso');
 }
+
