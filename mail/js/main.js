@@ -28,8 +28,9 @@
 
         // Dichiaro una Variabile in cui inserisco il Valore della mail inserita dall'utente
     
-
         let userMail = (emailInput.value);
+
+        // Dichiaro una Variabile che dichiari il messaggio che deve apparire in pagina all'utente
 
         let message = `
                 
