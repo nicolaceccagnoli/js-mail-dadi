@@ -14,7 +14,27 @@
 const container = document.querySelector('.container-fluid');
 console.log('container', container, typeof container);
 
-container.classList.add('bg-primary', 'vh-100', 'text-center');
+// Aggiungo dello stile al mio Container
+
+container.classList.add('bg-primary', 'vh-100', 'd-flex', 'justify-content-center', 'align-items-center');
+
+// Creo un elemento all'interno del Container
+
+const card  = document.createElement('div');
+console.log('card', card, typeof card);
+
+container.append(card);
+
+// Aggiungo dello stile alla mia Card
+
+card.classList.add('card');
+
+// Prendo il Form dall'HTML e lo metto dentro la mia Card
+
+const myForm = document.querySelector('form');
+console.log('myForm', myForm, typeof myForm);
+
+card.append(myForm);
 
 
 // 1) - a) Scrivo un programma che generi un numero da 1 a 6 per il giocatore;
