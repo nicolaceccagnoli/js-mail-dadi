@@ -10,25 +10,38 @@
 
 // 2) Controlla che sia nella lista di chi può accedere;
 
-    // Dichiaro una Variabile in cui inserisco l'input del Form
-
-    const emailInput = document.getElementById('mail');
-    // console.log('emailInput', emailInput, typeof emailInput);
 
     // Dichiaro una Variabile in cui inserisco il Bottone del Form
 
     const myButton = document.querySelector('button');
     // console.log('myButton', myButton, typeof myButton);
 
-    //  Dichiaro un'array contenente le mail valide
+    myButton.addEventListener('click', function(event) {
+        console.log('cliccato bottone')
+    });
 
-    const emailValid = ['nicola@gmail.com', 'nicola@boolean.com', 'nicola@icloud.com'];
+    const form = document.querySelector('form');
 
-    myButton.addEventListener('click', function(){
+    // Dichiaro una Variabile in cui inserisco l'input del Form
+
+    const emailInput = document.getElementById('mail');
+    // console.log('emailInput', emailInput, typeof emailInput);
+    
+
+
+    form.addEventListener('submit', function(event){
+
+        event.preventDefault();
+
 
         // Dichiaro una Variabile in cui inserisco il Valore della mail inserita dall'utente
     
-        let userMail = (emailInput.value);
+        const userMail = emailInput.value;
+
+        //  Dichiaro un'array contenente le mail valide
+
+        const emailValid = ['nicola@gmail.com', 'nicola@boolean.com', 'nicola@icloud.com'];
+
 
         // Dichiaro una Variabile che dichiari il messaggio che deve apparire in pagina all'utente
 
@@ -73,9 +86,9 @@
                                 Permesso di Entrare: 
                             </div>
                             <div class="card-body">
-                            <h5 class="card-title text-success">
-                                Concesso
-                            </h5>
+                                <h5 class="card-title text-success">
+                                    Concesso
+                                </h5>
                             </div>
                         </div>
     
@@ -95,7 +108,6 @@
         const messageElement = document.getElementById('message-element');
 
         messageElement.innerHTML = message;
-
 
     })
 

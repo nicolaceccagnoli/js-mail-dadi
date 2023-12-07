@@ -64,7 +64,6 @@ console.log('diceComputer', diceComputer, typeof diceComputer);
 
 if (dicePlayer > diceComputer) {
 
-
     // Creo un elemento in HTML e faccio apparire un messaggio per l'Utente
     const victory = document.createElement('div');
     console.log('victory', victory, typeof victory);
@@ -104,6 +103,7 @@ if (dicePlayer > diceComputer) {
 
 
     console.log('Fai schifo! Hai perso');
+
 } 
 
 })
